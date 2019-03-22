@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Java-разработчик Маминов Павел ~ Резюме",
+    "lang": "ru_RU"
+  },
   "general": {
     "name": "Павел Маминов",
     "race": "Человек",
@@ -17,29 +21,29 @@
     "professions_list": "REPORT AS A BUG",
     "alignment": "Законопослушный Добрый",
     "location": "Москва",
-    "photo_url": "photos/240/myself.jpg",
+    "photo_url": "https://cv.xobotun.com/photos/240/myself.jpg",
     "phone": "+7 916 533-25-55",
     "email": "maminov.pavel@mail.ru",
     "profiles": [
       {
         "name": "GitHub",
         "link": "https://github.com/xobotun",
-        "img": "icons/github.svg"
+        "img": "https://cv.xobotun.com/icons/github.svg"
       },
       {
         "name": "LinkedIn",
         "link": "https://www.linkedin.com/in/xobotun",
-        "img": "icons/linkedin.svg"
+        "img": "https://cv.xobotun.com/icons/linkedin.svg"
       },
       {
         "name": "ВКонтакте",
         "link": "https://vk.com/id10461816",
-        "img": "icons/vk.svg"
+        "img": "https://cv.xobotun.com/icons/vk.svg"
       },
       {
         "name": "HeadHunter",
         "link": "https://hh.ru/resume/f0b8dabbff031f44380039ed1f546f34695052",
-        "img": "icons/hh.svg"
+        "img": "https://cv.xobotun.com/icons/hh.svg"
       }
     ]
   },

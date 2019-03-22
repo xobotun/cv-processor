@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
  * Main container for a single resume data.
  */
 data class CV(
+                                        val meta:               Meta,
                                         val general:            GeneralSection,
     @JsonProperty("job_history")        val jobHistory:         List<JobHistory>,
     @JsonProperty("education_history")  val educationHistory:   List<EducationHistory>,
