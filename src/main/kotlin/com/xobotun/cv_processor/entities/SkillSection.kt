@@ -1,8 +1,7 @@
 package com.xobotun.cv_processor.entities
 
-import com.fasterxml.jackson.annotation.JsonClassDescription
-import com.fasterxml.jackson.annotation.JsonProperty
-import com.xobotun.cv_processor.getHumanReadableTimeSpan
+import com.fasterxml.jackson.annotation.JsonFormat
+import com.xobotun.cv_processor.util.getHumanReadableTimeSpan
 import java.time.LocalDate
 
 /**
@@ -20,11 +19,11 @@ data class SkillSection(
 data class SkillSet(
     val name:                   String,
     val level:                  Int,
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
     val began:                  LocalDate,
-    val description:            String,
-    val relatedSkills:          List<Subskill>
+    val subskills:              List<Subskill>
 ) {
-    val experience: String by lazy { getHumanReadableTimeSpan(began) }
+    val experience:             String by lazy { getHumanReadableTimeSpan(began) }
 }
 
 /**

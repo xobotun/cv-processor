@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonProperty
  */
 data class CV(
                                         val general:            GeneralSection,
-    @JsonProperty("job_history")        val jobHistory:         JobHistory,
-    @JsonProperty("education_history")  val educationHistory:   EducationHistory,
-                                        val skills:             SkillSection,
+    @JsonProperty("job_history")        val jobHistory:         List<JobHistory>,
+    @JsonProperty("education_history")  val educationHistory:   List<EducationHistory>,
+                                        val skills:             List<SkillSection>,
     @JsonProperty("books_read")         val booksRead:          BooksSection
 )

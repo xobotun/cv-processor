@@ -1,7 +1,8 @@
 package com.xobotun.cv_processor.entities
 
+import com.fasterxml.jackson.annotation.JsonFormat
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.xobotun.cv_processor.getHumanReadableTimeSpan
+import com.xobotun.cv_processor.util.getHumanReadableTimeSpan
 import java.time.LocalDate
 
 /**
@@ -11,6 +12,7 @@ data class GeneralSection(
     val name:           String,
     val race:           String,
     val gender:         String,
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
     val birthday:       LocalDate,
     val professions:    List<Profession>,
     val alignment:      String,

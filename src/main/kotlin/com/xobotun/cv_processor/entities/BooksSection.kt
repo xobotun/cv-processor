@@ -1,11 +1,5 @@
 package com.xobotun.cv_processor.entities
 
-import com.fasterxml.jackson.annotation.JsonClassDescription
-import com.fasterxml.jackson.annotation.JsonProperty
-import com.xobotun.cv_processor.getHumanReadableTimeSpan
-import java.awt.print.Book
-import java.time.LocalDate
-
 /**
  * More specific information on specimen's working history.
  */

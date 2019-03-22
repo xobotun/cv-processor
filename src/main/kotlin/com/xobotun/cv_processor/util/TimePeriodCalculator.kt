@@ -1,4 +1,4 @@
-package com.xobotun.cv_processor
+package com.xobotun.cv_processor.util
 
 import java.time.LocalDate
 
