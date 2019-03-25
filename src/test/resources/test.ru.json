@@ -7,7 +7,9 @@
       "education_history": "Образование",
       "skills": "Навыки",
       "books_read": "Книги",
-      "proof": "Подтверждение"
+      "proof": "Подтверждение",
+      "from_date": "С",
+      "to_date": "по"
     }
   },
   "general": {
