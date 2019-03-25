@@ -26,20 +26,20 @@ class Workplaces(val cv: CV) {
     }
 
     private fun getWorkplace(workplace: JobHistory) = """
-       |                        <div class="section__contents">
-       |                            <header class="entry__header">
-       |                                <span class="entry__header_qualification">${workplace.name}</span>
-       |                                <span title="${workplace.workplaceDescription}" class="entry__header_location anything__that_has_title_attribute">${workplace.where}</span>
-       |                                <br/>
-       |                                <time title="С 7 ноября 2017 по н.в." class="anything__that_has_title_attribute">${getHumanReadableTimeSpan(workplace.began, workplace.ended)}</time>
-       |                            </header>
-       |                            ${workplace.jobDescription}
-       |                            <br/>
-       |                            <span class="entry__skills_list">
-       |                                ${cv.meta.localization["skills"]}
-                                        ${workplace.relatedSkills.joinToString("\n") {"" +
-       "                                        <span class=\"entry__skills_list__item\">$it</span>"}}
-       |                            </span>
-       |                        </div>
+       |               <div class="section__contents">
+       |                   <header class="entry__header">
+       |                       <span class="entry__header_qualification">${workplace.name}</span>
+       |                       <span title="${workplace.workplaceDescription}" class="entry__header_location anything__that_has_title_attribute">${workplace.where}</span>
+       |                       <br/>
+       |                       <time title="С 7 ноября 2017 по н.в." class="anything__that_has_title_attribute">${getHumanReadableTimeSpan(workplace.began, workplace.ended)}</time>
+       |                   </header>
+       |                   ${workplace.jobDescription}
+       |                   <br/>
+       |                   <span class="entry__skills_list">
+       |                       ${cv.meta.localization["skills"]}:
+                               ${workplace.relatedSkills.joinToString("") {"\n" +
+       "                              <span class=\"entry__skills_list__item\">$it</span>"}}
+       |                   </span>
+       |               </div>
 """.trimIndent()
 }

@@ -5,7 +5,7 @@ import com.xobotun.cv_processor.entities.CV
 class BodyContent(val cv: CV) {
     val generalSection: String = GeneralSection(cv).processed
     val jobHistory: String = JobHistorySection(cv).processed
-    val educationHistory: String = ""
+    val educationHistory: String = EducationHistorySection(cv).processed
     val skillSection: String = ""
     val booksSection: String = ""
 
