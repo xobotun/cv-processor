@@ -7,7 +7,7 @@ class BodyContent(val cv: CV) {
     val jobHistory: String = JobHistorySection(cv).processed
     val educationHistory: String = EducationHistorySection(cv).processed
     val skillSection: String = ""
-    val booksSection: String = ""
+    val booksSection: String = BooksSection(cv).processed
 
     val processed: String = """
        |    <div id="wrapper">
@@ -19,11 +19,11 @@ class BodyContent(val cv: CV) {
        |        <div class="menu__wrapper">
        |            <div class="menu__wrapper_fake_contents">
        |                <menu id="menu">
-       |                    <li class="menu__item"><a href="#">В начало</a></li>
-       |                    <li class="menu__item"><a href="#job_history">История работы</a></li>
-       |                    <li class="menu__item"><a href="#education_history">Образование</a></li>
-       |                    <li class="menu__item"><a href="#skills">Навыки</a></li>
-       |                    <li class="menu__item"><a href="#books_read">Книги</a></li>
+       |                    <li class="menu__item"><a href="#">${cv.meta.localization["home"]}</a></li>
+       |                    <li class="menu__item"><a href="#job_history">${cv.meta.localization["job_history"]}</a></li>
+       |                    <li class="menu__item"><a href="#education_history">${cv.meta.localization["education_history"]}</a></li>
+       |                    <li class="menu__item"><a href="#skills">${cv.meta.localization["skills"]}</a></li>
+       |                    <li class="menu__item"><a href="#books_read">${cv.meta.localization["books_read"]}</a></li>
        |                </menu>
        |            </div>
        |        </div>
