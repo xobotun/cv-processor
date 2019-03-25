@@ -1,6 +1,7 @@
 package com.xobotun.cv_processor.processor.parts
 
 import com.xobotun.cv_processor.entities.CV
+import com.xobotun.cv_processor.entities.ProfileLink
 
 class GeneralSection(val cv: CV) {
     val links: String = Links(cv).processed
@@ -32,14 +33,14 @@ class Links(val cv: CV) {
     val processed: String by lazy {
         var result = "";
         for (link in cv.general.profiles) {
-            result +=
-                    """
-       |                        <a href="${link.link}">
-       |                            <img no-enlarger="" src="${link.img}" class="bio__contacts__icon">
-       |                        </a>
-""".trimIndent()
-            result += '\n';
+            result += getLink(link) + '\n';
         }
         return@lazy result;
     }
+
+    private fun getLink(link: ProfileLink) = """
+       |                        <a href="${link.link}">
+       |                            <img no-enlarger="" src="${link.img}" class="bio__contacts__icon" alt="${link.name}">
+       |                        </a>
+""".trimIndent()
 }

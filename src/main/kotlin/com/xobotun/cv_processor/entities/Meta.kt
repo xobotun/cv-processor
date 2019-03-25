@@ -10,5 +10,6 @@ import java.time.LocalDate
  */
 data class Meta(
     val title:          String,
-    val lang:           String
+    val lang:           String,
+    val localization:   Map<String, String>
 )
