@@ -2,7 +2,6 @@ package com.xobotun.cv_processor.processor.parts
 
 import com.xobotun.cv_processor.entities.CV
 import com.xobotun.cv_processor.entities.EducationHistory
-import com.xobotun.cv_processor.entities.JobHistory
 import com.xobotun.cv_processor.util.getHumanReadableLocalDate
 import com.xobotun.cv_processor.util.getHumanReadableTimeSpan
 
@@ -12,7 +11,7 @@ class EducationHistorySection(val cv: CV) {
     val processed: String = """
        |        <section class="section">
        |            <header id="education_history" class="section__header">${cv.meta.localization["education_history"]}</header>
-                    $educations
+$educations
        |        </section>
     """.trim()
 }

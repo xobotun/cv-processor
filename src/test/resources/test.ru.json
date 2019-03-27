@@ -10,7 +10,8 @@
       "books_read": "Книги",
       "proof": "Подтверждение",
       "from_date": "С",
-      "to_date": "по"
+      "to_date": "по",
+      "moar": "Подробности"
     }
   },
   "general": {

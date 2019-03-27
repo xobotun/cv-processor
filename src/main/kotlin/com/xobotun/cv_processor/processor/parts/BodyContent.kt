@@ -6,7 +6,7 @@ class BodyContent(val cv: CV) {
     val generalSection: String = GeneralSection(cv).processed
     val jobHistory: String = JobHistorySection(cv).processed
     val educationHistory: String = EducationHistorySection(cv).processed
-    val skillSection: String = ""
+    val skillSection: String = SkillSection(cv).processed
     val booksSection: String = BooksSection(cv).processed
 
     val processed: String = """

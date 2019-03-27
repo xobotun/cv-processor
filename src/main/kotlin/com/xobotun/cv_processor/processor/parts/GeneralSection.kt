@@ -21,7 +21,7 @@ class GeneralSection(val cv: CV) {
        |                        ${cv.general.location}
        |                    </span>
        |                    <div class="bio__contacts">
-                                $links
+$links
        |                    </div>
        |                </div>
        |            </div>
