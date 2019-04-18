@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Java-разработчик Маминов Павел ~ Резюме",
-    "lang": "ru_RU",
+    "lang": "ru",
     "localization": {
       "home": "В начало",
       "job_history": "История работы",
@@ -12,7 +12,17 @@
       "from_date": "С",
       "to_date": "по",
       "moar": "Подробности"
-    }
+    },
+    "languages": [
+      {
+        "code": "ru",
+        "name": "Rus"
+      },
+      {
+        "code": "en",
+        "name": "Eng"
+      }
+    ]
   },
   "general": {
     "name": "Павел Маминов",

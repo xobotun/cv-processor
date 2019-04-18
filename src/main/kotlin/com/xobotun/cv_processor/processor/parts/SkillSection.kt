@@ -10,7 +10,7 @@ class SkillSection(val cv: CV) {
 
     val processed: String = """
        |        <section class="section">
-       |            <header id="job_history" class="section__header">${cv.meta.localization["skills"]}</header>
+       |            <header id="skills" class="section__header">${cv.meta.localization["skills"]}</header>
 $skills
        |        </section>
     """.trim()

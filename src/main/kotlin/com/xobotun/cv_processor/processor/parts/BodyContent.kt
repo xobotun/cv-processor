@@ -16,7 +16,8 @@ class BodyContent(val cv: CV) {
                     $educationHistory
                     $skillSection
                     $booksSection
-       |        <div class="menu__wrapper">
+       |
+       |        <div class="menu__wrapper disappear_on_small_screen">
        |            <div class="menu__wrapper_fake_contents">
        |                <menu id="menu">
        |                    <li class="menu__item"><a href="#">${cv.meta.localization["home"]}</a></li>
@@ -27,7 +28,24 @@ class BodyContent(val cv: CV) {
        |                </menu>
        |            </div>
        |        </div>
+       |
+       |        <div class="menu__wrapper disappear_on_small_screen">
+       |            <div class="menu__wrapper_fake_contents">
+       |                <!-- Flags via https://github.com/lipis/flag-icon-css -->
+       |                <menu id="lang">
+                            ${getLangMenu()}
+       |                </menu>
+       |            </div>
+       |        </div>
+       |
        |        <div id="photo_enlarger__white_background" class="photo_enlarger__hidden"><img src="" id="photo_enlarger__photo"></div>
        |    </div>
     """.trim()
+
+    private fun getLangMenu() {
+        cv.meta.languages.map { """
+        |                    <li class="lang_menu__item"><a href="/cv_${it.code}_compiled.html"><img src="https://cv.xobotun.com/icons/flags/${it.code}.svg" alt="${it.name}"/></a></li>
+        """ }
+            .joinToString(separator = "\n")
+    }
 }
