@@ -29,7 +29,7 @@ class BodyContent(val cv: CV) {
        |            </div>
        |        </div>
        |
-       |        <div class="menu__wrapper disappear_on_small_screen">
+       |        <div class="menu__wrapper lang_menu_to_right">
        |            <div class="menu__wrapper_fake_contents">
        |                <!-- Flags via https://github.com/lipis/flag-icon-css -->
        |                <menu id="lang">
