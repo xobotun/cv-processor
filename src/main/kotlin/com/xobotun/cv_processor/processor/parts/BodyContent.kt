@@ -42,8 +42,8 @@ class BodyContent(val cv: CV) {
        |    </div>
     """.trim()
 
-    private fun getLangMenu() {
-        cv.meta.languages.map { """
+    private fun getLangMenu() : String {
+        return cv.meta.languages.map { """
         |                    <li class="lang_menu__item"><a href="/cv_${it.code}_compiled.html"><img src="https://cv.xobotun.com/icons/flags/${it.code}.svg" alt="${it.name}"/></a></li>
         """ }
             .joinToString(separator = "\n")
