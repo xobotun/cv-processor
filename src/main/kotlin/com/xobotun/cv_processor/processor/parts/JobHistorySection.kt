@@ -31,7 +31,7 @@ class Workplaces(val cv: CV) {
        |                       <span class="entry__header_qualification">${workplace.name}</span>
        |                       <span title="${workplace.workplaceDescription}" class="entry__header_location anything__that_has_title_attribute">${workplace.where}</span>
        |                       <br/>
-       |                       <time title="${cv.meta.localization["from_date"]} ${getHumanReadableLocalDate(workplace.began)} ${cv.meta.localization["to_date"]} ${getHumanReadableLocalDate(workplace.ended)}" class="anything__that_has_title_attribute">${getHumanReadableTimeSpan(workplace.began, workplace.ended)}</time>
+       |                       <time title="${cv.meta.localization["from_date"]} ${getHumanReadableLocalDate(cv, workplace.began)} ${cv.meta.localization["to_date"]} ${getHumanReadableLocalDate(cv, workplace.ended)}" class="anything__that_has_title_attribute">${getHumanReadableTimeSpan(workplace.began, workplace.ended)}</time>
        |                   </header>
        |                   ${workplace.jobDescription}
        |                   <br/>

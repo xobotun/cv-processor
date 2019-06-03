@@ -31,7 +31,7 @@ class Educations(val cv: CV) {
        |                        <span class="entry__header_qualification">${education.name}</span>
        |                        <span class="entry__header_qualification">${education.where}</span>
        |                        <br/>
-       |                        <time title="${cv.meta.localization["from_date"]} ${getHumanReadableLocalDate(education.began)} ${cv.meta.localization["to_date"]} ${getHumanReadableLocalDate(education.ended)}" class="anything__that_has_title_attribute">${getHumanReadableTimeSpan(education.began, education.ended)}</time>
+       |                        <time title="${cv.meta.localization["from_date"]} ${getHumanReadableLocalDate(cv, education.began)} ${cv.meta.localization["to_date"]} ${getHumanReadableLocalDate(cv, education.ended)}" class="anything__that_has_title_attribute">${getHumanReadableTimeSpan(education.began, education.ended)}</time>
        |                        ${if (education.proofUrl != null) "<a href=\"${education.proofUrl}\" class=\"entry__header_undertext\">${cv.meta.localization["proof"]}</a>" else ""}
        |                    </header>
        |                    ${education.description}

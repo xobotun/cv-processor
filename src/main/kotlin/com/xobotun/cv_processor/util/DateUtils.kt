@@ -1,5 +1,6 @@
 package com.xobotun.cv_processor.util
 
+import com.xobotun.cv_processor.entities.CV
 import java.time.LocalDate
 import java.time.Period
 import java.time.format.DateTimeFormatter
@@ -10,8 +11,8 @@ import kotlin.collections.ArrayList
 var myDateLocale: String = "global variable, wow! Never imagined I'd write one.";
 
 // No way to format in Java 8
-fun getHumanReadableTimeSpan(from: LocalDate, to: LocalDate = LocalDate.now()) : String {
-    val duration = Period.between(from, to.plusDays(1))
+fun getHumanReadableTimeSpan(from: LocalDate, to: LocalDate? = null) : String {
+    val duration = if (to == null) Period.between(from, LocalDate.now().plusDays(1)) else Period.between(from, to.plusDays(1));
 
     val experienceParts = ArrayList<String>()
 
@@ -28,7 +29,9 @@ fun getHumanReadableTimeSpan(from: LocalDate, to: LocalDate = LocalDate.now()) :
     return experienceParts.joinToString(" ")
 }
 
-fun getHumanReadableLocalDate(date: LocalDate) = DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(Locale(myDateLocale)).format(date)!!
+fun getHumanReadableLocalDate(cv: CV, date: LocalDate?) : String {
+    return if (date == null) cv.meta.localization["now"]!! else DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG).withLocale(Locale(myDateLocale)).format(date)!!
+}
 
 /**
  * Formats input to human-readable format.

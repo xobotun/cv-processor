@@ -14,7 +14,7 @@ data class JobHistory(
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
     val began:                  LocalDate,
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
-    val ended:                  LocalDate = LocalDate.now(),
+    val ended:                  LocalDate?,
     @JsonProperty("workplace_description")
     val workplaceDescription:   String,
     @JsonProperty("job_description")
