@@ -12,6 +12,8 @@ class Html(val cv: CV) {
        |        <title>${cv.meta.title}</title>
        |        <meta charset="UTF-8">
        |        <meta name="yandex-verification" content="02857c5790ebd962">
+       |        <meta name="viewport" content="width=device-width, initial-scale=1">
+       |        <meta name="Description" content="${cv.meta.description}">
        |        <link href="https://cv.xobotun.com/css/stylesheet.css" rel="stylesheet">
        |        <link href="https://cv.xobotun.com/css/photo_enlarger.css" rel="stylesheet">
        |        <script async src="https://cv.xobotun.com/js/photo_enlarger.js"></script>

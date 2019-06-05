@@ -6,6 +6,7 @@ package com.xobotun.cv_processor.entities
 data class Meta(
     val title:          String,
     val lang:           String,
+    val description:    String,
     val localization:   Map<String, String>,
     val languages:      List<Lang>
 )
