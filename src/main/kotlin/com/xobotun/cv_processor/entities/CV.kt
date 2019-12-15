@@ -9,7 +9,5 @@ data class CV(
                                         val meta:               Meta,
                                         val general:            GeneralSection,
     @JsonProperty("job_history")        val jobHistory:         List<JobHistory>,
-    @JsonProperty("education_history")  val educationHistory:   List<EducationHistory>,
-                                        val skills:             List<SkillSection>,
-    @JsonProperty("books_read")         val booksRead:          BooksSection
+    @JsonProperty("education_history")  val educationHistory:   List<EducationHistory>
 )
